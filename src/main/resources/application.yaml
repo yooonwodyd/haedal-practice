@@ -5,10 +5,14 @@ spring:
     password: dbswodyd91
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
+    defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
     open-in-view: false
+  sql:
+    init:
+      mode: always

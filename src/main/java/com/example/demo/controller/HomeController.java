@@ -22,6 +22,7 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model){
         List<Article> articles = articleService.articleList();
+
         model.addAttribute("articles",articles);
         return "home";
     }
